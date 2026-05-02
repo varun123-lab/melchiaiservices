@@ -377,6 +377,64 @@
     .products-right { padding: 2rem 1.5rem; border-left: none; border-top: 1px solid var(--border); }
     .bottom-strip { padding: 1rem 1.5rem; flex-wrap: wrap; }
   }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+
+  .modal-inner {
+    position: relative;
+    width: 92vw;
+    height: 90vh;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #0a0f0a;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    background: #141a14;
+    flex-shrink: 0;
+  }
+
+  .modal-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .modal-close {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--ink2);
+    border-radius: 6px;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .modal-close:hover { border-color: rgba(255,255,255,0.3); color: var(--ink); }
+
+  .modal-frame {
+    flex: 1;
+    border: none;
+    width: 100%;
+  }
 </style>
 </head>
 <body>
@@ -405,7 +463,7 @@
       <h1>We build AI that <em>does the work</em></h1>
       <p class="hero-sub">Melchi builds AI agents and data products that replace the manual work your team shouldn't be doing — so you can focus on closing deals.</p>
       <div class="hero-actions">
-        <a href="/crediva.html" class="btn-primary">See our products <span>→</span></a>
+        <a href="#" class="btn-primary" onclick="openModal(); return false;">See our products <span>→</span></a>
         <a href="mailto:hello@melchi.io" class="btn-secondary">Get in touch <span>↗</span></a>
       </div>
     </div>
@@ -418,7 +476,7 @@
       </div>
 
       <div class="products-grid">
-        <a href="/crediva.html" class="product-card">
+        <a href="#" class="product-card" onclick="openModal(); return false;">
           <span class="product-badge badge-live">● Live</span>
           <div class="product-name">Crediva</div>
           <p class="product-desc">Professional licensing data for sales teams. Filter 160,000+ contractors, doctors, and real estate agents by location, license status, and renewal window. Export to CSV or push directly to Salesforce and HubSpot.</p>
@@ -463,6 +521,32 @@
   </div>
 
 </div><!-- end page-content -->
+
+<!-- CREDIVA MODAL -->
+<div class="modal-overlay" id="credivaModal" onclick="closeModal(event)">
+  <div class="modal-inner">
+    <div class="modal-topbar">
+      <span class="modal-title">Crediva — License Renewal Data</span>
+      <button class="modal-close" onclick="closeModal()">Close ×</button>
+    </div>
+    <iframe class="modal-frame" id="credivaFrame" src="" title="Crediva"></iframe>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    const frame = document.getElementById('credivaFrame');
+    if (!frame.src || frame.src === window.location.href) frame.src = '/crediva.html';
+    document.getElementById('credivaModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(e) {
+    if (e && e.target !== document.getElementById('credivaModal') && !e.target.classList.contains('modal-close')) return;
+    document.getElementById('credivaModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(e); });
+</script>
 
 </body>
 </html>
