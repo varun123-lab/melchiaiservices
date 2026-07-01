@@ -257,9 +257,6 @@
 
   .product-card:hover::before { transform: scaleX(1); }
 
-  .product-card.coming-soon { opacity: 0.5; cursor: default; }
-  .product-card.coming-soon:hover { transform: none; border-color: var(--border); }
-
   .product-badge {
     display: inline-flex;
     align-items: center;
@@ -274,7 +271,6 @@
   }
 
   .badge-live { background: rgba(34,197,94,0.12); color: var(--accent); border: 1px solid rgba(34,197,94,0.25); }
-  .badge-soon { background: rgba(234,179,8,0.1); color: #eab308; border: 1px solid rgba(234,179,8,0.25); }
 
   .product-name {
     font-family: 'Syne', sans-serif;
@@ -418,11 +414,11 @@
       </div>
 
       <div class="products-grid">
-        <div class="product-card coming-soon">
-          <span class="product-badge badge-soon">Coming soon</span>
+        <div class="product-card">
+          <span class="product-badge badge-live">Live</span>
           <div class="product-name">Voice Agent</div>
           <p class="product-desc">AI-powered voice agents for small businesses. Handle inbound calls, book appointments, and follow up with leads — 24/7, without hiring. Built for contractors, medical offices, and real estate teams.</p>
-          <span class="product-link" style="color: var(--ink3);">In development</span>
+          <span class="product-link">Learn more <span class="arrow">→</span></span>
         </div>
       </div>
     </div>
