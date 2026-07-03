@@ -470,6 +470,23 @@
   }
   .contact-email:hover { color: var(--accent-strong); }
 
+  #products,
+  #about,
+  #contact {
+    scroll-margin-top: 90px;
+  }
+
+  @keyframes targetFlash {
+    0% { box-shadow: 0 0 0 0 rgba(110,231,168,0); }
+    20% { box-shadow: 0 0 0 4px rgba(110,231,168,0.28); }
+    100% { box-shadow: 0 0 0 0 rgba(110,231,168,0); }
+  }
+
+  .target-flash {
+    animation: targetFlash 700ms ease-out;
+    border-radius: 12px;
+  }
+
   @media (max-width: 980px) {
     nav { padding: 0.8rem 1.2rem; }
     .nav-links { display: none; }
@@ -526,9 +543,9 @@
 <nav>
   <a href="#top" class="nav-logo">Melchi</a>
   <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
+    <li><a href="products.html">Products</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+    <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
   </ul>
 </nav>
 
@@ -547,8 +564,8 @@
       <h1>We build AI that <em>does the work</em></h1>
       <p class="hero-sub">Melchi builds AI agents and data products that replace the manual work your team shouldn't be doing — so you can focus on closing deals.</p>
       <div class="hero-actions">
-        <a href="#products" class="btn-primary">See our products <span>→</span></a>
-        <a href="#contact" class="btn-secondary">Get in touch <span>↗</span></a>
+        <a href="products.html" class="btn-primary">See our products <span>→</span></a>
+        <a href="contact.html" class="btn-secondary">Get in touch <span>↗</span></a>
       </div>
       <div class="hero-metrics">
         <div class="metric">
@@ -574,7 +591,7 @@
       </div>
 
       <div class="products-grid">
-        <a href="#contact" class="product-card">
+        <a href="products.html" class="product-card">
           <span class="product-badge badge-live">Live</span>
           <div class="product-name">Voice Agent</div>
           <p class="product-desc">AI-powered voice agents for small businesses. Handle inbound calls, book appointments, and follow up with leads — 24/7, without hiring. Built for contractors, medical offices, and real estate teams.</p>

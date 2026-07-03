@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melchi Products</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #f8fffb;
+    --ink2: rgba(248,255,251,0.78);
+    --paper: #06120c;
+    --panel: #10271d;
+    --accent: #6ee7a8;
+    --accent-strong: #34d399;
+    --border: rgba(248,255,251,0.12);
+  }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    background:
+      radial-gradient(1100px 500px at 100% 0%, rgba(52,211,153,0.14), transparent 60%),
+      linear-gradient(155deg, #041008 0%, #0a1b14 60%, #13261d 100%);
+    color: var(--ink);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+    background: rgba(4,13,9,0.75);
+    backdrop-filter: blur(14px);
+    position: sticky;
+    top: 0;
+  }
+
+  .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .nav-links { display: flex; gap: 1rem; list-style: none; }
+  .nav-links a {
+    color: var(--ink2);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .nav-links .cta {
+    color: #082216;
+    background: var(--accent);
+    border-radius: 999px;
+    padding: 0.45rem 0.95rem;
+  }
+
+  main {
+    width: min(1100px, calc(100% - 2rem));
+    margin: 2rem auto 3rem;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 0.7rem;
+  }
+
+  .lead {
+    color: var(--ink2);
+    max-width: 62ch;
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    background: linear-gradient(150deg, rgba(19,49,35,0.9), rgba(12,30,22,0.92));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.2rem;
+  }
+
+  .badge {
+    display: inline-block;
+    border: 1px solid rgba(110,231,168,0.32);
+    color: var(--accent);
+    background: rgba(110,231,168,0.14);
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.62rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .card h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    color: var(--ink2);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #082216;
+    background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.58rem 0.9rem;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Melchi</a>
+  <ul class="nav-links">
+    <li><a href="products.html">Products</a></li>
+    <li><a href="contact.html" class="cta">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1>Products</h1>
+  <p class="lead">Melchi builds automation products for teams that want faster follow-up, fewer manual tasks, and better lead handling.</p>
+
+  <section class="grid">
+    <article class="card">
+      <span class="badge">Live</span>
+      <h2>Voice Agent</h2>
+      <p>AI voice assistants that answer inbound calls, handle common questions, qualify leads, and route urgent requests instantly.</p>
+      <a class="btn" href="contact.html">Talk to us <span>→</span></a>
+    </article>
+
+    <article class="card">
+      <span class="badge">Custom</span>
+      <h2>Automation Setup</h2>
+      <p>Custom AI workflow setup for your team, including lead routing, CRM updates, and appointment follow-up automation.</p>
+      <a class="btn" href="contact.html">Get a quote <span>→</span></a>
+    </article>
+  </section>
+</main>
+</body>
+</html>

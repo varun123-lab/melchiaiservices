@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Melchi</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #f8fffb;
+    --ink2: rgba(248,255,251,0.78);
+    --paper: #06120c;
+    --accent: #6ee7a8;
+    --accent-strong: #34d399;
+    --border: rgba(248,255,251,0.12);
+  }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    background:
+      radial-gradient(1000px 500px at 100% 0%, rgba(52,211,153,0.14), transparent 60%),
+      linear-gradient(160deg, #041008 0%, #0a1b14 60%, #12251c 100%);
+    color: var(--ink);
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+  }
+
+  .card {
+    width: min(680px, 100%);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: linear-gradient(150deg, rgba(15,37,27,0.92), rgba(10,25,18,0.94));
+    padding: clamp(1.2rem, 4vw, 2rem);
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.68rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 0.7rem;
+  }
+
+  p {
+    color: var(--ink2);
+    line-height: 1.7;
+    margin-bottom: 1.3rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    padding: 0.65rem 1rem;
+  }
+
+  .btn-primary {
+    color: #082216;
+    background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  }
+
+  .btn-secondary {
+    color: var(--ink);
+    border: 1px solid var(--border);
+    background: rgba(10,25,18,0.55);
+  }
+
+  .meta {
+    font-size: 0.86rem;
+    color: var(--ink2);
+  }
+
+  .meta a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="eyebrow">Contact</div>
+    <h1>Let’s build your AI workflow</h1>
+    <p>Tell us your current process and we’ll show exactly where automation can save your team time and increase response speed.</p>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:hello@melchi.io?subject=Melchi%20Inquiry">Email us <span>↗</span></a>
+      <a class="btn btn-secondary" href="products.html">View products <span>→</span></a>
+      <a class="btn btn-secondary" href="index.html">Back home <span>→</span></a>
+    </div>
+
+    <div class="meta">Email: <a href="mailto:hello@melchi.io">hello@melchi.io</a></div>
+  </main>
+</body>
+</html>
