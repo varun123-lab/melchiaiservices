@@ -406,6 +406,69 @@
   .arrow { transition: transform 0.2s; }
   .product-card:hover .arrow { transform: translateX(4px); }
 
+  .testimonials {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: clamp(1.5rem, 3.6vw, 2.8rem) clamp(1.2rem, 4vw, 4.2rem);
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(160deg, rgba(10,25,18,0.84), rgba(8,20,15,0.92));
+  }
+
+  .testimonials-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .testimonials-header h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    letter-spacing: -0.02em;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem;
+  }
+
+  .testimonial-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem;
+    background: linear-gradient(150deg, rgba(18,42,31,0.86), rgba(10,24,18,0.9));
+  }
+
+  .testimonial-quote {
+    color: var(--ink2);
+    line-height: 1.7;
+    font-size: 0.9rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .testimonial-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.04rem;
+  }
+
+  .testimonial-name {
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 0.84rem;
+  }
+
+  .testimonial-role {
+    color: var(--ink3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    font-size: 0.66rem;
+  }
+
   /* BOTTOM STRIP */
   .bottom-strip {
     border-top: 1px solid var(--border);
@@ -471,6 +534,7 @@
   .contact-email:hover { color: var(--accent-strong); }
 
   #products,
+  #testimonials,
   #about,
   #contact {
     scroll-margin-top: 90px;
@@ -514,6 +578,9 @@
       flex-wrap: wrap;
       justify-content: flex-start;
     }
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
     .contact-inline {
       align-items: flex-start;
     }
@@ -544,6 +611,7 @@
   <a href="#top" class="nav-logo">Melchi</a>
   <ul class="nav-links">
     <li><a href="products.html">Products</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
   </ul>
@@ -601,6 +669,36 @@
     </div>
 
   </div><!-- end main-row -->
+
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-header">
+      <span class="section-label">Proof from teams</span>
+      <h3>What clients say</h3>
+    </div>
+    <div class="testimonials-grid">
+      <article class="testimonial-card">
+        <p class="testimonial-quote">“We went from missing calls after 5 PM to booking jobs automatically. The Voice Agent paid for itself in the first month.”</p>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">Ryan M.</span>
+          <span class="testimonial-role">Owner, HVAC Company</span>
+        </div>
+      </article>
+      <article class="testimonial-card">
+        <p class="testimonial-quote">“Lead follow-up is now instant and consistent. Our team spends time closing deals instead of chasing inboxes.”</p>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">Anita K.</span>
+          <span class="testimonial-role">Sales Lead, Realty Group</span>
+        </div>
+      </article>
+      <article class="testimonial-card">
+        <p class="testimonial-quote">“Melchi mapped our process in one week and shipped automation right away. Setup was clean and the handoff was simple.”</p>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">Dr. Patel</span>
+          <span class="testimonial-role">Clinic Director</span>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <!-- BOTTOM STRIP -->
   <div class="bottom-strip" id="about">

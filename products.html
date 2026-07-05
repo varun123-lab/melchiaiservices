@@ -131,6 +131,47 @@
     font-size: 0.85rem;
     padding: 0.58rem 0.9rem;
   }
+
+  .testimonials {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.4rem;
+  }
+
+  .testimonials h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.25rem, 2.3vw, 1.6rem);
+    margin-bottom: 0.7rem;
+  }
+
+  .testimonials .lead {
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.85rem;
+  }
+
+  .testimonial {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem;
+    background: linear-gradient(160deg, rgba(18,44,32,0.84), rgba(10,24,18,0.88));
+  }
+
+  .testimonial p {
+    margin-bottom: 0.8rem;
+  }
+
+  .person {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--ink2);
+  }
 </style>
 </head>
 <body>
@@ -144,7 +185,7 @@
 
 <main>
   <h1>Products</h1>
-  <p class="lead">Melchi builds automation products for teams that want faster follow-up, fewer manual tasks, and better lead handling.</p>
+  <p class="lead">Melchi builds AI products for teams that want faster follow-up, fewer manual tasks, and better lead handling.</p>
 
   <section class="grid">
     <article class="card">
@@ -156,10 +197,25 @@
 
     <article class="card">
       <span class="badge">Custom</span>
-      <h2>Automation Setup</h2>
-      <p>Custom AI workflow setup for your team, including lead routing, CRM updates, and appointment follow-up automation.</p>
+      <h2>Lead Response System</h2>
+      <p>A custom lead response system for your team, including qualification flows, CRM handoff rules, and follow-up sequences.</p>
       <a class="btn" href="contact.html">Get a quote <span>→</span></a>
     </article>
+  </section>
+
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <p class="lead">Teams using Melchi report faster response times and fewer missed opportunities.</p>
+    <div class="testimonial-grid">
+      <article class="testimonial">
+        <p>“Our inbound calls are now handled instantly, and customers get answers without waiting for office hours.”</p>
+        <div class="person">Operations Manager, Home Services Team</div>
+      </article>
+      <article class="testimonial">
+        <p>“The lead response workflow helped us cut manual follow-up work by more than half in two weeks.”</p>
+        <div class="person">Founder, Local Agency</div>
+      </article>
+    </div>
   </section>
 </main>
 </body>
