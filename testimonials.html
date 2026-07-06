@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Testimonials | Melchi</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #f8fffb;
+    --ink2: rgba(248,255,251,0.78);
+    --paper: #06120c;
+    --panel: #10271d;
+    --accent: #6ee7a8;
+    --accent-strong: #34d399;
+    --border: rgba(248,255,251,0.12);
+  }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    background:
+      radial-gradient(1100px 500px at 100% 0%, rgba(52,211,153,0.14), transparent 60%),
+      linear-gradient(155deg, #041008 0%, #0a1b14 60%, #13261d 100%);
+    color: var(--ink);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+    background: rgba(4,13,9,0.75);
+    backdrop-filter: blur(14px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .nav-links { display: flex; gap: 1rem; list-style: none; }
+
+  .nav-links a {
+    color: var(--ink2);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .nav-links a.active {
+    color: var(--accent);
+  }
+
+  .nav-links .cta {
+    color: #082216;
+    background: var(--accent);
+    border-radius: 999px;
+    padding: 0.45rem 0.95rem;
+  }
+
+  main {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 2rem auto 3rem;
+  }
+
+  .hero {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    margin-bottom: 1.2rem;
+    background: linear-gradient(150deg, rgba(19,49,35,0.85), rgba(12,30,22,0.92));
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    margin-bottom: 0.6rem;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 0.7rem;
+  }
+
+  .lead {
+    color: var(--ink2);
+    max-width: 64ch;
+    line-height: 1.7;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .testimonial {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem;
+    background: linear-gradient(160deg, rgba(18,44,32,0.84), rgba(10,24,18,0.88));
+  }
+
+  .testimonial p {
+    color: var(--ink);
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+  }
+
+  .person {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--ink2);
+  }
+
+  .cta-row {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.58rem 0.9rem;
+  }
+
+  .btn-primary {
+    color: #082216;
+    background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  }
+
+  .btn-secondary {
+    color: var(--ink);
+    border: 1px solid var(--border);
+    background: rgba(10,25,18,0.6);
+  }
+
+  @media (max-width: 760px) {
+    nav { padding: 0.9rem 1rem; }
+    .nav-links { gap: 0.6rem; }
+    .nav-links a { font-size: 0.82rem; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Melchi</a>
+  <ul class="nav-links">
+    <li><a href="products.html">Products</a></li>
+    <li><a href="testimonials.html" class="active">Testimonials</a></li>
+    <li><a href="contact.html" class="cta">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">Client Results</div>
+    <h1>Testimonials</h1>
+    <p class="lead">Real feedback from teams using Melchi to improve response speed, capture more leads, and automate appointment workflows.</p>
+  </section>
+
+  <section class="testimonial-grid">
+    <article class="testimonial">
+      <p>"Our inbound calls are now handled instantly, and customers get answers without waiting for office hours."</p>
+      <div class="person">Operations Manager, Home Services Team</div>
+    </article>
+    <article class="testimonial">
+      <p>"The lead response workflow helped us cut manual follow-up work by more than half in two weeks."</p>
+      <div class="person">Founder, Local Agency</div>
+    </article>
+    <article class="testimonial">
+      <p>"We started booking more appointments without adding front-desk workload. The AI follow-up made a huge difference."</p>
+      <div class="person">Owner, Number One Hair Cuts</div>
+    </article>
+    <article class="testimonial">
+      <p>"We went from missing calls after 5 PM to booking jobs automatically. The Voice Agent paid for itself in the first month."</p>
+      <div class="person">Owner, HVAC Company</div>
+    </article>
+    <article class="testimonial">
+      <p>"Lead follow-up is now instant and consistent. Our team spends time closing deals instead of chasing inboxes."</p>
+      <div class="person">Sales Lead, Realty Group</div>
+    </article>
+    <article class="testimonial">
+      <p>"Our team gets qualified appointments in the calendar without back-and-forth calls. It is the most useful automation we have added."</p>
+      <div class="person">Director, Med Spa Group</div>
+    </article>
+  </section>
+
+  <div class="cta-row">
+    <a class="btn btn-primary" href="contact.html">Start with Melchi <span>→</span></a>
+    <a class="btn btn-secondary" href="products.html">View products <span>→</span></a>
+  </div>
+</main>
+</body>
+</html>
