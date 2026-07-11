@@ -20,6 +20,8 @@
     --accent-strong: #34d399;
     --accent-soft: rgba(110,231,168,0.13);
     --border: rgba(248,255,251,0.12);
+    --accent-warm: #f7c66a;
+    --border-strong: rgba(248,255,251,0.22);
     --shadow: 0 20px 60px rgba(2, 8, 6, 0.45);
   }
 
@@ -31,9 +33,10 @@
     font-family: 'Manrope', sans-serif;
     min-height: 100vh;
     background:
-      radial-gradient(1300px 600px at 90% -10%, rgba(52,211,153,0.15), transparent 60%),
-      radial-gradient(1000px 500px at -10% 100%, rgba(16,185,129,0.16), transparent 62%),
-      linear-gradient(150deg, #041008 0%, #0b1b14 55%, #13261d 100%);
+      radial-gradient(1300px 600px at 90% -10%, rgba(52,211,153,0.2), transparent 60%),
+      radial-gradient(980px 520px at 5% 105%, rgba(16,185,129,0.2), transparent 62%),
+      radial-gradient(860px 420px at 55% -15%, rgba(247,198,106,0.12), transparent 65%),
+      linear-gradient(150deg, #041008 0%, #0b1b14 46%, #13261d 100%);
     color: var(--ink);
     font-size: 16px;
     line-height: 1.6;
@@ -45,7 +48,7 @@
     position: sticky;
     top: 0;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 1rem 4rem;
+    padding: 1rem clamp(1rem, 4vw, 3rem);
     background: rgba(4,13,9,0.72);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
@@ -88,12 +91,12 @@
 
   /* PAGE CONTENT */
   .page-content {
-    width: min(1200px, calc(100% - 3rem));
-    margin: 2rem auto;
-    border: 1px solid var(--border);
+    width: min(1240px, calc(100% - 2.2rem));
+    margin: 1.4rem auto 2rem;
+    border: 1px solid var(--border-strong);
     border-radius: 24px;
     overflow: hidden;
-    background: linear-gradient(145deg, rgba(8,24,16,0.84), rgba(12,31,22,0.7));
+    background: linear-gradient(145deg, rgba(8,24,16,0.84), rgba(12,31,22,0.72));
     box-shadow: var(--shadow);
     position: relative;
   }
@@ -128,8 +131,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: clamp(2.4rem, 4.5vw, 4.2rem);
+    padding: clamp(2rem, 4.5vw, 4.2rem);
     animation: fadeUp 0.8s ease-out both;
+  }
+
+  .hero-panel {
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid var(--border);
+    background:
+      radial-gradient(700px 260px at 80% 0%, rgba(247,198,106,0.08), transparent 65%),
+      linear-gradient(165deg, rgba(12,33,22,0.84), rgba(8,20,15,0.72));
   }
 
   .hero-tag {
@@ -188,10 +200,10 @@
   .hero-sub {
     font-size: 1rem;
     color: var(--ink2);
-    max-width: 48ch;
+    max-width: 62ch;
     font-weight: 500;
-    line-height: 1.75;
-    margin-bottom: 2.5rem;
+    line-height: 1.72;
+    margin-bottom: 1.1rem;
   }
 
   .hero-actions {
@@ -199,7 +211,7 @@
     gap: 0.9rem;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin: 1.2rem 0 1.8rem;
   }
 
   .hero-metrics {
@@ -213,7 +225,7 @@
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 0.8rem;
-    background: rgba(9,26,18,0.58);
+    background: rgba(9,26,18,0.62);
   }
 
   .metric-value {
@@ -409,10 +421,36 @@
   .testimonials {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    padding: clamp(1.5rem, 3.6vw, 2.8rem) clamp(1.2rem, 4vw, 4.2rem);
+    padding: clamp(1.8rem, 3.6vw, 2.8rem) clamp(1.1rem, 4vw, 4.2rem);
     position: relative;
     z-index: 1;
     background: linear-gradient(160deg, rgba(10,25,18,0.84), rgba(8,20,15,0.92));
+  }
+
+  .page-content > section.testimonials:nth-of-type(odd) {
+    background: linear-gradient(160deg, rgba(9,22,16,0.93), rgba(8,20,14,0.96));
+  }
+
+  .testimonials h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.62rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.52rem;
+    font-size: clamp(1.05rem, 2vw, 1.38rem);
+  }
+
+  .testimonials h2:first-of-type {
+    margin-top: 0.4rem;
+  }
+
+  .testimonials h2::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, var(--accent-warm), var(--accent-strong));
+    box-shadow: 0 0 0 4px rgba(110,231,168,0.12);
   }
 
   .testimonials-header {
@@ -466,7 +504,28 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-weight: 700;
-    font-size: 0.66rem;
+    font-size: 0.68rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .testimonials ul.product-desc {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem 0.72rem;
+    list-style: none;
+    padding-left: 0 !important;
+    margin-bottom: 1.2rem;
+  }
+
+  .testimonials ul.product-desc li {
+    font-size: 0.86rem;
+    color: var(--ink2);
+    font-weight: 600;
+    line-height: 1.4;
+    background: linear-gradient(145deg, rgba(20,47,34,0.9), rgba(10,24,18,0.92));
+    border: 1px solid rgba(248,255,251,0.12);
+    border-radius: 10px;
+    padding: 0.48rem 0.64rem;
   }
 
   /* BOTTOM STRIP */
@@ -504,9 +563,10 @@
   }
 
   .about-item-value {
-    font-size: 0.84rem;
+    font-size: 0.9rem;
     color: var(--ink2);
     font-weight: 500;
+    max-width: 70ch;
   }
 
   .contact-inline {
@@ -536,7 +596,11 @@
   #products,
   #testimonials,
   #about,
-  #contact {
+  #contact,
+  #why,
+  #capabilities,
+  #use-cases,
+  #cta {
     scroll-margin-top: 90px;
   }
 
@@ -561,6 +625,9 @@
     }
     .main-row { grid-template-columns: 1fr; }
     .hero-left { padding: 1.6rem 1.2rem; }
+        .hero-actions {
+          margin-bottom: 1.4rem;
+        }
     .products-right {
       padding: 1.4rem 1.2rem 1.6rem;
       border-left: none;
@@ -577,6 +644,12 @@
       padding: 1rem 1.2rem;
       flex-wrap: wrap;
       justify-content: flex-start;
+    }
+    .testimonials h2 {
+      margin-top: 1.3rem;
+    }
+    .testimonials ul.product-desc {
+      grid-template-columns: 1fr;
     }
     .testimonials-grid {
       grid-template-columns: 1fr;
@@ -621,11 +694,33 @@
   <div class="page-bg"></div>
   <div class="page-grid"></div>
 
-  <div class="hero-left">
+  <section class="hero-left hero-panel" id="overview">
+    <div class="hero-tag">
+      <div class="hero-dot"></div>
+      Production-ready AI Voice Agents
+    </div>
     <h1>AI Voice Agents That Answer, Qualify, Book, and Support - 24/7</h1>
     <p class="hero-sub">Give your business a voice that never sleeps. Our AI voice agents handle real customer conversations naturally, helping you capture more leads, reduce missed calls, automate repetitive tasks, and deliver faster support at scale.</p>
     <p class="hero-sub">Whether you run a clinic, real estate office, restaurant, service business, or growing startup, our AI voice agents can answer calls, understand customer needs, take action, and keep your team focused on higher-value work.</p>
-  </div>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-primary">Book a Demo <span>→</span></a>
+      <a href="#capabilities" class="btn-secondary">See Capabilities <span>↓</span></a>
+    </div>
+    <div class="hero-metrics">
+      <div class="metric">
+        <div class="metric-value">24/7</div>
+        <div class="metric-label">Always-On Coverage</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">Instant</div>
+        <div class="metric-label">Call Response Time</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">Higher</div>
+        <div class="metric-label">Lead Capture Rate</div>
+      </div>
+    </div>
+  </section>
 
   <section class="testimonials" id="why">
     <div class="testimonials-header">
@@ -643,7 +738,7 @@
     <h2>Answer Every Call Instantly</h2>
     <p class="testimonial-quote">Never miss another customer. Your AI voice agent answers calls immediately, greets customers professionally, and guides them to the right solution.</p>
     <p class="testimonial-role">Perfect for:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>Busy offices</li>
       <li>After-hours calls</li>
       <li>High call volume businesses</li>
@@ -653,7 +748,7 @@
     <h2>Book Appointments Automatically</h2>
     <p class="testimonial-quote">Let customers schedule appointments without waiting for a staff member. The AI agent can check availability, collect details, confirm bookings, and send follow-up information.</p>
     <p class="testimonial-role">Perfect for:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>Medical clinics</li>
       <li>Dental offices</li>
       <li>Salons and spas</li>
@@ -664,7 +759,7 @@
     <h2>Qualify Leads Before They Reach Your Team</h2>
     <p class="testimonial-quote">Your AI voice agent asks the right questions, understands customer intent, and collects key information before sending qualified leads to your sales team.</p>
     <p class="testimonial-role">Perfect for:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>Real estate agents</li>
       <li>Insurance agencies</li>
       <li>Law firms</li>
@@ -675,7 +770,7 @@
     <h2>Handle Customer Support Questions</h2>
     <p class="testimonial-quote">Reduce repetitive calls by letting AI answer common questions about pricing, hours, services, order status, policies, and next steps.</p>
     <p class="testimonial-role">Perfect for:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>E-commerce businesses</li>
       <li>Local service companies</li>
       <li>SaaS companies</li>
@@ -686,7 +781,7 @@
     <h2>Follow Up With Customers</h2>
     <p class="testimonial-quote">AI voice agents can call leads, remind customers about appointments, confirm attendance, collect feedback, and re-engage people who showed interest but never booked.</p>
     <p class="testimonial-role">Perfect for:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>Sales teams</li>
       <li>Clinics</li>
       <li>Gyms</li>
@@ -703,7 +798,7 @@
     <h2>Healthcare Clinics</h2>
     <p class="testimonial-quote">AI voice agents help clinics answer patient calls, schedule appointments, send reminders, collect basic intake information, and reduce front desk workload.</p>
     <p class="testimonial-role">Use cases:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>Appointment scheduling</li>
       <li>Missed call recovery</li>
       <li>Patient reminders</li>
@@ -714,7 +809,7 @@
     <h2>Real Estate</h2>
     <p class="testimonial-quote">Real estate teams can use AI voice agents to qualify buyers, respond to property inquiries, schedule showings, and follow up with leads automatically.</p>
     <p class="testimonial-role">Use cases:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>Buyer qualification</li>
       <li>Seller lead intake</li>
       <li>Property inquiry responses</li>
@@ -725,7 +820,7 @@
     <h2>Home Services</h2>
     <p class="testimonial-quote">Plumbers, electricians, HVAC companies, cleaning services, and contractors can use AI voice agents to answer calls, collect job details, provide estimates, and book service appointments.</p>
     <p class="testimonial-role">Use cases:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>Emergency call handling</li>
       <li>Service booking</li>
       <li>Quote request intake</li>
@@ -736,7 +831,7 @@
     <h2>Restaurants</h2>
     <p class="testimonial-quote">Restaurants can use AI voice agents to answer calls about hours, reservations, menu questions, catering, and large party bookings.</p>
     <p class="testimonial-role">Use cases:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>Reservation handling</li>
       <li>Menu questions</li>
       <li>Catering inquiries</li>
@@ -747,7 +842,7 @@
     <h2>Law Firms</h2>
     <p class="testimonial-quote">Law firms can use AI voice agents to capture new client inquiries, collect case details, route calls, and schedule consultations.</p>
     <p class="testimonial-role">Use cases:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>New client intake</li>
       <li>Consultation scheduling</li>
       <li>Practice area qualification</li>
@@ -758,7 +853,7 @@
     <h2>Education and Coaching</h2>
     <p class="testimonial-quote">Schools, tutoring centers, coaches, and training programs can use AI voice agents to answer program questions, qualify students, book calls, and follow up with interested families.</p>
     <p class="testimonial-role">Use cases:</p>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>Program inquiries</li>
       <li>Enrollment support</li>
       <li>Parent questions</li>
@@ -782,7 +877,7 @@
     <div class="testimonials-header">
       <h3>Benefits</h3>
     </div>
-    <ul class="product-desc" style="padding-left: 1.25rem; margin-bottom: 1.2rem;">
+    <ul class="product-desc">
       <li>Capture more leads</li>
       <li>Reduce missed calls</li>
       <li>Save staff time</li>
