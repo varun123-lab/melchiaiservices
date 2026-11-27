@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Email Triage Employee for Seattle Practices | $60/month | Melchi</title>
+<meta name="description" content="Solo doctors and small Seattle practices. Sorts the inbox and drafts replies for staff to approve. $60/month, month-to-month. 14-day pilot before you pay.">
+<link rel="canonical" href="https://melchi.io/doctors/">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#06120c">
+<meta property="og:title" content="AI Email Triage Employee for Seattle Practices | $60/month | Melchi">
+<meta property="og:description" content="Solo doctors and small Seattle practices. Sorts the inbox and drafts replies for staff to approve. $60/month, month-to-month. 14-day pilot before you pay.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://melchi.io/doctors/">
+<meta property="og:site_name" content="Melchi">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI Email Triage Employee for Seattle Practices | $60/month | Melchi">
+<meta name="twitter:description" content="Solo doctors and small Seattle practices. Sorts the inbox and drafts replies for staff to approve. $60/month, month-to-month. 14-day pilot before you pay.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://melchi.io/doctors/",
+      "url": "https://melchi.io/doctors/",
+      "name": "AI Email Triage Employee for Seattle Practices | $60/month | Melchi",
+      "description": "Solo doctors and small Seattle practices. Sorts the inbox and drafts replies for staff to approve. $60/month, month-to-month. 14-day pilot before you pay.",
+      "isPartOf": { "@type": "WebSite", "name": "Melchi", "url": "https://melchi.io" },
+      "about": { "@id": "https://melchi.io/doctors/#service" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://melchi.io/doctors/#service",
+      "name": "AI Email Triage Employee",
+      "serviceType": "Email triage and draft replies for small medical practice inboxes",
+      "provider": {
+        "@type": "Organization",
+        "name": "Melchi",
+        "url": "https://melchi.io",
+        "email": "hello@melchi.io"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Seattle"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Independent solo doctors and small medical practices, including direct primary care, concierge, family medicine, pediatrics, and dermatology"
+      },
+      "description": "Sorts a practice inbox into appointment requests, refill requests, records requests, billing, and vendor or spam. Flags urgent messages for staff, drafts replies for the team to approve, and routes messages. It triages and drafts only. It gives no medical advice. Staff review everything before it goes out.",
+      "offers": {
+        "@type": "Offer",
+        "price": "60",
+        "priceCurrency": "USD",
+        "description": "$60/month, month-to-month, no long contract. 14-day pilot before you pay. Optional add-on: AI voice receptionist that answers calls 24/7."
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://melchi.io/doctors/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does it give medical advice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It triages and drafts only. It gives no medical advice. Your staff review everything before it goes out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who sees the messages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The staff who already work your inbox. They see the sorted mail and the drafts, and they review each reply before it is sent. Ask us about our data handling and BAA options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we cancel anytime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It is month-to-month, with no long contract. You can cancel anytime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What inboxes work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gmail, Google Workspace, and Outlook."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #f8fffb;
+    --ink2: rgba(248,255,251,0.78);
+    --ink3: rgba(248,255,251,0.5);
+    --paper: #06120c;
+    --accent: #6ee7a8;
+    --accent-strong: #34d399;
+    --accent-soft: rgba(110,231,168,0.13);
+    --border: rgba(248,255,251,0.12);
+    --accent-warm: #f7c66a;
+    --border-strong: rgba(248,255,251,0.22);
+    --shadow: 0 20px 60px rgba(2, 8, 6, 0.45);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    background:
+      radial-gradient(1300px 600px at 90% -10%, rgba(52,211,153,0.2), transparent 60%),
+      radial-gradient(980px 520px at 5% 105%, rgba(16,185,129,0.2), transparent 62%),
+      radial-gradient(860px 420px at 55% -15%, rgba(247,198,106,0.12), transparent 65%),
+      linear-gradient(150deg, #041008 0%, #0b1b14 46%, #13261d 100%);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: rgba(110,231,168,0.35); color: var(--ink); }
+
+  nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.25rem;
+    flex-wrap: wrap;
+    padding: 1rem clamp(1rem, 4vw, 3rem);
+    background: rgba(4,13,9,0.72);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+
+  .nav-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem 1.35rem;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink2);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent-strong); }
+
+  .nav-cta {
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    padding: 0.52rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 700 !important;
+    transition: transform 0.2s, background 0.2s !important;
+    box-shadow: 0 10px 24px rgba(52,211,153,0.26);
+  }
+
+  .nav-cta:hover {
+    background: var(--accent-strong) !important;
+    transform: translateY(-1px);
+  }
+
+  a:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .page-content {
+    width: min(1240px, calc(100% - 2.2rem));
+    margin: 1.4rem auto 2rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 24px;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(8,24,16,0.84), rgba(12,31,22,0.72));
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+
+  .page-bg {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(circle at 86% 16%, rgba(110,231,168,0.22), transparent 38%),
+      radial-gradient(circle at 10% 88%, rgba(52,211,153,0.16), transparent 40%);
+  }
+
+  .page-grid {
+    position: absolute; inset: 0; z-index: 0; opacity: 0.05; pointer-events: none;
+    background-image:
+      linear-gradient(var(--ink) 1px, transparent 1px),
+      linear-gradient(90deg, var(--ink) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  .hero,
+  .block,
+  .bottom-strip {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero {
+    padding: clamp(2rem, 4.5vw, 4.2rem);
+    border-bottom: 1px solid var(--border);
+    background:
+      radial-gradient(700px 260px at 80% 0%, rgba(247,198,106,0.08), transparent 65%),
+      linear-gradient(165deg, rgba(12,33,22,0.84), rgba(8,20,15,0.72));
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(110,231,168,0.34);
+    background: var(--accent-soft);
+    border-radius: 999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .hero-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+    flex: 0 0 auto;
+    animation: blink 1.8s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.3rem, 5vw, 4.15rem);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1.15rem;
+    max-width: 16ch;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--ink2);
+    max-width: 46rem;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-sub strong {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1.45rem 0 0.9rem;
+  }
+
+  .btn-primary, .btn-secondary {
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 46px;
+    transition: transform 0.18s, box-shadow 0.18s, background 0.2s, border-color 0.2s, color 0.2s;
+  }
+
+  .btn-primary {
+    background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+    color: var(--paper);
+    padding: 0.78rem 1.4rem;
+    box-shadow: 0 14px 26px rgba(52,211,153,0.25);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 34px rgba(52,211,153,0.3);
+  }
+
+  .btn-secondary {
+    color: var(--ink2);
+    border: 1px solid var(--border);
+    padding: 0.78rem 1.2rem;
+    background: rgba(12,29,20,0.4);
+  }
+
+  .btn-secondary:hover {
+    color: var(--ink);
+    border-color: rgba(248,255,251,0.28);
+    background: rgba(14,34,23,0.76);
+  }
+
+  .reassure {
+    color: var(--ink2);
+    font-size: 0.92rem;
+    max-width: 46rem;
+    font-weight: 600;
+  }
+
+  .reassure a, .fine a, .about-item-value a, .faq-list a, .guard a, .addon a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .reassure a:hover, .fine a:hover, .about-item-value a:hover, .faq-list a:hover, .guard a:hover, .addon a:hover { color: var(--accent-strong); }
+
+  .block {
+    padding: clamp(1.8rem, 3.6vw, 2.9rem) clamp(1.2rem, 4vw, 4.2rem);
+    border-top: 1px solid var(--border);
+    background: linear-gradient(160deg, rgba(10,25,18,0.84), rgba(8,20,15,0.92));
+  }
+
+  .block:nth-of-type(even) {
+    background: linear-gradient(160deg, rgba(9,22,16,0.93), rgba(8,20,14,0.96));
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+  }
+
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.45rem, 2.6vw, 2rem);
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    color: var(--ink);
+    margin-bottom: 1.15rem;
+    max-width: 22ch;
+  }
+
+  .lead {
+    color: var(--ink2);
+    max-width: 62ch;
+    font-weight: 500;
+    line-height: 1.7;
+    margin: -0.35rem 0 1.15rem;
+  }
+
+  .cards, .sort-grid, .check-list, .steps, .faq-list {
+    list-style: none;
+  }
+
+  .cards, .sort-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .sort-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+
+  .sort-grid li { grid-column: span 2; }
+
+  .sort-grid li:nth-child(n+4) { grid-column: span 3; }
+
+  .cards li, .sort-grid li, .check-list li, .step, .faq-list details, .price-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: linear-gradient(155deg, rgba(20,44,32,0.92), rgba(13,28,21,0.9));
+  }
+
+  .cards li, .sort-grid li {
+    padding: 1.05rem 1rem 1.15rem;
+  }
+
+  .cards h3, .sort-grid h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+    line-height: 1.25;
+  }
+
+  .cards p, .sort-grid p {
+    color: var(--ink2);
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+
+  .guard {
+    margin-top: 0.9rem;
+    border: 1px solid rgba(247,198,106,0.38);
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(42,36,18,0.55), rgba(16,32,24,0.92));
+    padding: 0.95rem 1.05rem;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.55;
+  }
+
+  .check-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+
+  .check-list li {
+    padding: 0.95rem 1rem 0.95rem 2.7rem;
+    position: relative;
+    color: var(--ink2);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .check-list li::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 1.15rem;
+    width: 0.85rem;
+    height: 0.45rem;
+    border-left: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(-45deg);
+  }
+
+  .price-card {
+    max-width: 34rem;
+    padding: 1.35rem 1.3rem 1.2rem;
+    border-color: rgba(110,231,168,0.38);
+    background:
+      radial-gradient(420px 180px at 100% 0%, rgba(110,231,168,0.16), transparent 62%),
+      linear-gradient(155deg, rgba(20,44,32,0.92), rgba(13,28,21,0.9));
+    box-shadow: 0 16px 40px rgba(2, 8, 6, 0.28);
+  }
+
+  .price-name {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .price-amount {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.6rem, 5vw, 3.4rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .price-period {
+    color: var(--ink2);
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+
+  .price-note {
+    color: var(--ink2);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .price-card ul {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .price-card li {
+    position: relative;
+    padding-left: 1.45rem;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .price-card li::before {
+    content: '';
+    position: absolute;
+    left: 0.1rem;
+    top: 0.45rem;
+    width: 0.85rem;
+    height: 0.45rem;
+    border-left: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(-45deg);
+  }
+
+  .addon {
+    border-top: 1px solid var(--border);
+    padding-top: 0.9rem;
+    color: var(--ink);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .fine {
+    margin-top: 1.15rem;
+    color: var(--ink2);
+    max-width: 68ch;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    list-style: none;
+  }
+
+  .step { padding: 1.05rem 1rem 1.15rem; }
+
+  .step-num {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.55rem;
+  }
+
+  .step p {
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .faq-list { display: grid; gap: 0.7rem; }
+
+  .faq-list details {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .faq-list summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 1rem 1.15rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .faq-list summary::-webkit-details-marker { display: none; }
+
+  .faq-list summary::after {
+    content: '+';
+    color: var(--accent);
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: 500;
+    flex: 0 0 auto;
+  }
+
+  .faq-list details[open] summary::after { content: '–'; }
+
+  .faq-list details p {
+    padding: 0 1.15rem 1.05rem;
+    color: var(--ink2);
+    max-width: 68ch;
+  }
+
+  .cta-block h2 { max-width: 16em; }
+
+  .bottom-strip {
+    border-top: 1px solid var(--border);
+    background: rgba(9,23,16,0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem clamp(1.2rem, 4vw, 4.2rem);
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .about-item { display: flex; flex-direction: column; gap: 0.15rem; }
+
+  .about-item-label, .contact-inline-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    font-weight: 700;
+  }
+
+  .about-item-value {
+    font-size: 0.92rem;
+    color: var(--ink2);
+    font-weight: 600;
+  }
+
+  .contact-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.1rem;
+  }
+
+  .contact-email {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .contact-email:hover { color: var(--accent-strong); }
+
+  @media (max-width: 900px) {
+    .cards, .steps, .check-list { grid-template-columns: 1fr 1fr; }
+    .sort-grid { grid-template-columns: 1fr 1fr; }
+    .sort-grid li, .sort-grid li:nth-child(n+4) { grid-column: auto; }
+    .sort-grid li:last-child { grid-column: 1 / -1; }
+    .cards li:last-child { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 720px) {
+    .page-content {
+      width: calc(100% - 1.1rem);
+      margin: 0.55rem auto 1rem;
+      border-radius: 16px;
+    }
+    .hero { padding: 1.5rem 1.15rem 1.6rem; }
+    .block { padding: 1.45rem 1.15rem 1.55rem; }
+    h1 { max-width: none; }
+    .hero-sub { font-size: 0.98rem; }
+    .cards, .steps, .check-list, .sort-grid { grid-template-columns: 1fr; }
+    .sort-grid li:last-child, .cards li:last-child { grid-column: auto; }
+    .contact-inline { align-items: flex-start; }
+    .bottom-strip { padding: 1rem 1.15rem; }
+    .nav-links { gap: 0.55rem 0.8rem; }
+    .nav-links a { font-size: 0.84rem; }
+    .price-card { max-width: none; }
+  }
+
+  @media (max-width: 520px) {
+    .hero-actions { align-items: stretch; }
+    .hero-actions a { width: 100%; }
+    .hero-tag { font-size: 0.65rem; letter-spacing: 0.06em; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero-dot { animation: none; }
+    .btn-primary, .btn-secondary, .nav-cta { transition: none; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/index.html" class="nav-logo">Melchi AI</a>
+  <ul class="nav-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/products.html">Products</a></li>
+    <li><a href="/testimonials.html">Testimonials</a></li>
+    <li><a href="/contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-content">
+  <div class="page-bg"></div>
+  <div class="page-grid"></div>
+
+  <header class="hero">
+    <div class="hero-tag">
+      <span class="hero-dot" aria-hidden="true"></span>
+      Seattle solo doctors and small practices
+    </div>
+    <h1>Your AI Email Triage Employee</h1>
+    <p class="hero-sub"><strong>$60/month.</strong> It sorts the practice inbox so appointment requests, refills, and records do not sit in one unread pile.</p>
+    <p class="hero-sub">For independent solo physicians and small practices in the Seattle area — direct primary care, concierge, family medicine, pediatrics, and dermatology.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="mailto:hello@melchi.io?subject=Email%20triage%20pilot%20for%20my%20practice&amp;body=Hi%20Melchi%2C%0A%0AI%27d%20like%20a%2014-day%20pilot%20of%20the%20AI%20Email%20Triage%20Employee%20for%20my%20practice%2C%20before%20I%20pay.%0A%0AName%3A%0APractice%3A%0AInbox%20(Gmail%2C%20Google%20Workspace%2C%20or%20Outlook)%3A%0A">Start a 14-day pilot <span aria-hidden="true">→</span></a>
+    </div>
+    <p class="reassure">It triages and drafts only. It gives no medical advice. Staff review everything before it goes out. 14-day pilot before you pay. Month-to-month, no long contract. Or email <a href="mailto:hello@melchi.io">hello@melchi.io</a>.</p>
+  </header>
+
+  <section class="block" id="problem" aria-labelledby="problem-heading">
+    <p class="section-label">The problem</p>
+    <h2 id="problem-heading">Mail arrives faster than the desk can sort it.</h2>
+    <p class="lead">A solo doctor or a small Seattle practice already runs the day with a short front desk. Patient email does not wait for a spare hour.</p>
+    <ul class="cards">
+      <li>
+        <h3>After-hours messages</h3>
+        <p>A scheduling note, a refill, or a parent message can land at 9pm. It waits until someone opens the inbox in the morning.</p>
+      </li>
+      <li>
+        <h3>The inbox piles up</h3>
+        <p>Appointments, refills, records, billing, and vendor mail land in the same place. Between patients, the pile gets longer.</p>
+      </li>
+      <li>
+        <h3>A small front desk</h3>
+        <p>The same people answer the phone, check patients in, and clear email. Sorting every message is the work that slips.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block" id="sorts" aria-labelledby="sorts-heading">
+    <p class="section-label">The inbox</p>
+    <h2 id="sorts-heading">What it sorts</h2>
+    <p class="lead">It reads the practice inbox and separates the mail your team already handles, instead of leaving every request in one thread.</p>
+    <ul class="sort-grid">
+      <li>
+        <h3>Appointment requests</h3>
+        <p>New visits, follow-ups, and reschedules, pulled out of the general inbox.</p>
+      </li>
+      <li>
+        <h3>Refill requests</h3>
+        <p>Medication refill messages, grouped for the person who handles them.</p>
+      </li>
+      <li>
+        <h3>Records requests</h3>
+        <p>Chart copies, forms, and records requests, set aside from day-to-day mail.</p>
+      </li>
+      <li>
+        <h3>Billing</h3>
+        <p>Payments, statements, and insurance questions, routed toward billing.</p>
+      </li>
+      <li>
+        <h3>Vendor and spam</h3>
+        <p>Sales mail and noise, kept out of the patient queue.</p>
+      </li>
+    </ul>
+    <p class="guard">Anything urgent is flagged for staff. It drafts a reply for the team to approve, and it routes each message by what it is. It triages and drafts only. It gives no medical advice. Staff review everything before it goes out.</p>
+  </section>
+
+  <section class="block" id="how" aria-labelledby="how-heading">
+    <p class="section-label">Setup</p>
+    <h2 id="how-heading">How it works</h2>
+    <ol class="steps">
+      <li class="step">
+        <div class="step-num">Step 1</div>
+        <p>Connect the practice inbox. Gmail, Google Workspace, or Outlook.</p>
+      </li>
+      <li class="step">
+        <div class="step-num">Step 2</div>
+        <p>It sorts each message, flags anything urgent, and drafts a reply.</p>
+      </li>
+      <li class="step">
+        <div class="step-num">Step 3</div>
+        <p>Staff approve. Nothing goes out until someone on your team sends it.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block" id="pricing" aria-labelledby="pricing-heading">
+    <p class="section-label">Pricing</p>
+    <h2 id="pricing-heading">$60 a month. No long contract.</h2>
+    <article class="price-card">
+      <p class="price-name">AI Email Triage Employee</p>
+      <div class="price-row">
+        <span class="price-amount">$60</span>
+        <span class="price-period">/month</span>
+      </div>
+      <p class="price-note">Month-to-month. One practice inbox.</p>
+      <ul>
+        <li>Sorts appointment requests, refill requests, records requests, billing, and vendor or spam</li>
+        <li>Flags anything urgent for staff</li>
+        <li>Drafts replies for the team to approve</li>
+        <li>Routes each message by what it is</li>
+        <li>Month-to-month, no long contract</li>
+      </ul>
+      <p class="addon">Optional add-on: AI voice receptionist that answers calls 24/7</p>
+    </article>
+  </section>
+
+  <section class="block" id="pilot" aria-labelledby="pilot-heading">
+    <p class="section-label">Before you pay</p>
+    <h2 id="pilot-heading">A 14-day pilot on your inbox</h2>
+    <p class="lead">Try it before you pay. If you keep it, the price is $60/month, and you can cancel anytime.</p>
+    <ul class="check-list">
+      <li>14 days on the practice inbox, before you pay</li>
+      <li>You see the sorting, the urgent flags, and the drafts</li>
+      <li>Staff still review every reply during the pilot</li>
+      <li>After the pilot, $60/month if you continue</li>
+      <li>Month-to-month after that. No long contract.</li>
+    </ul>
+    <p class="fine"><a href="mailto:hello@melchi.io?subject=Data%20handling%20and%20BAA%20options&amp;body=Hi%20Melchi%2C%0A%0AI%27d%20like%20to%20ask%20about%20your%20data%20handling%20and%20BAA%20options.%0A%0APractice%3A%0A">Ask us about our data handling and BAA options.</a></p>
+  </section>
+
+  <section class="block" id="faq" aria-labelledby="faq-heading">
+    <p class="section-label">Questions</p>
+    <h2 id="faq-heading">Short FAQ</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Does it give medical advice?</summary>
+        <p>No. It triages and drafts only. It gives no medical advice. Your staff review everything before it goes out.</p>
+      </details>
+      <details>
+        <summary>Who sees the messages?</summary>
+        <p>The staff who already work your inbox. They see the sorted mail and the drafts, and they review each reply before it is sent. <a href="mailto:hello@melchi.io?subject=Data%20handling%20and%20BAA%20options&amp;body=Hi%20Melchi%2C%0A%0AI%27d%20like%20to%20ask%20about%20your%20data%20handling%20and%20BAA%20options.%0A%0APractice%3A%0A">Ask us about our data handling and BAA options.</a></p>
+      </details>
+      <details>
+        <summary>Can we cancel anytime?</summary>
+        <p>Yes. It is month-to-month, with no long contract. You can cancel anytime.</p>
+      </details>
+      <details>
+        <summary>What inboxes work?</summary>
+        <p>Gmail, Google Workspace, and Outlook.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="block cta-block" id="start" aria-labelledby="cta-heading">
+    <p class="section-label">Next step</p>
+    <h2 id="cta-heading">Start a 14-day pilot before you pay.</h2>
+    <p class="lead">Then $60/month, month-to-month, with no long contract. It triages and drafts only. Staff review everything before it goes out.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="mailto:hello@melchi.io?subject=Email%20triage%20pilot%20for%20my%20practice&amp;body=Hi%20Melchi%2C%0A%0AI%27d%20like%20a%2014-day%20pilot%20of%20the%20AI%20Email%20Triage%20Employee%20for%20my%20practice%2C%20before%20I%20pay.%0A%0AName%3A%0APractice%3A%0AInbox%20(Gmail%2C%20Google%20Workspace%2C%20or%20Outlook)%3A%0A">Start a 14-day pilot <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <footer class="bottom-strip">
+    <div class="about-item">
+      <div class="about-item-label">Melchi</div>
+      <div class="about-item-value"><a href="/index.html">Home</a> · <a href="/products.html">Products</a> · <a href="/testimonials.html">Testimonials</a> · <a href="/contact.html">Contact</a></div>
+    </div>
+    <div class="contact-inline">
+      <div class="contact-inline-label">Email</div>
+      <a class="contact-email" href="mailto:hello@melchi.io">hello@melchi.io</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
